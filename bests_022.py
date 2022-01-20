@@ -26,6 +26,6 @@ for line in f:
         top_name.append(name)
 
 for names in top_name:
-    name = 
-print('Best student(s):', top_name)
+    name = ','.join(top_name)
+print('Best student(s):' + name)
 print('Best mark:', top_mark)
