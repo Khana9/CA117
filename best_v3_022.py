@@ -1,8 +1,5 @@
 #!/usr/bin/env python3
-#/usr/bin/env python3
-
-import sys
-
+import sys 
 file = sys.argv[1]
 err = 0
 
@@ -25,6 +22,5 @@ with open(file, "r") as f:
                 top_name = name
         except ValueError:
             print('Invalid mark', mark, 'encountered. Skipping.')
-
 print('Best student:', top_name.strip())
 print('Best mark:', top_mark)
