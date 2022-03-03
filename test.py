@@ -1,10 +1,28 @@
-from termios import CBAUD
+from lamp_072 import Lamp
 
+def main():
+    lamp1 = Lamp()
 
-test = "cba"
-test1 = "abc"
+    assert(not(lamp1.on))
+    lamp1.turn_off()
+    assert(not(lamp1.on))
+    lamp1.turn_on()
+    assert(lamp1.on)
+    lamp1.turn_on()
+    assert(lamp1.on)
+    lamp1.turn_off()
+    assert(not(lamp1.on))
+    lamp1.toggle()
+    assert(lamp1.on)
+    lamp1.turn_off()
+    lamp1.turn_off()
+    assert(not(lamp1.on))
 
-test_sorted = sorted(test)
-test = "".join(test_sorted)
+    lamp2 = Lamp(True)
 
-print(test)
+    assert(lamp2.on)
+    lamp2.toggle()
+    assert(not(lamp2.on))
+
+if __name__ == '__main__':
+    main()
